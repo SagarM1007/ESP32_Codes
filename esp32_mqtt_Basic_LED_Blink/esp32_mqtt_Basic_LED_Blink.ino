@@ -9,6 +9,7 @@ const int mqtt_port = 1883;
 const char* mqtt_topic_sub = "esp32/test/sub";
 const char* mqtt_topic_pub = "esp32/test/pub";
 
+
 #define LED_PIN_2 2
 
 WiFiClient espClient;
