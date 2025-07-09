@@ -1,0 +1,25 @@
+{
+  "ssid": "RedmiNote",
+  "password": "Sagar1007",
+  "mqtt_server": "broker.hivemq.com",
+  "mqtt_port": 1111,
+  "mqtt_topic_sub": "esp32/test/sub",
+  "mqtt_topic_pub": "esp32/test/pub",
+  "device_id": "DEVICE123",
+  "tenant_id": "TENANT001",
+  "device_name": "Temperature Sensor A1",
+  "device_type": "DHT22",
+  "metric_name": "temperature",
+  "metric_value": 31.5,
+  "metric_unit": "C",
+  "recorded_at": "2025-06-15T17:00:00Z",
+  "location": "18.5204,73.8567",
+  "meta": {
+    "sensor_serial": "SN-8890",
+    "firmware": "1.0.5",
+    "labels": [
+      "lab",
+      "env"
+    ]
+  }
+}
