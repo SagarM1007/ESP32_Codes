@@ -1,0 +1,26 @@
+{
+  "ssid": "Redmi",
+  "password": "Sagar1007",
+  "mqtt_server": "broker.hivemq.com",
+  "mqtt_port": 1883,
+  "mqtt_topic_sub": "esp32/test/sub",
+  "mqtt_topic_pub": "esp32/test/pub",
+  
+  "device_id": "ESP32",
+  "tenant_id": "Technosoft",
+  "device_name": "TEMP Sensor ",
+  "device_type": "DHT22",
+  "metric_name": "TEMP",
+  "metric_value": 37.5,
+  "metric_unit": "C",
+  "recorded_at": "2025-06-15T17:00:00Z",
+  "location": "18.5204,73.8567",
+  "meta": {
+    "sensor_serial": "SN-8890",
+    "firmware": "1.0.5",
+    "labels": [
+      "lab",
+      "env"
+    ]
+  }
+}
