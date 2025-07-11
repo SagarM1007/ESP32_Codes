@@ -2,6 +2,7 @@
 #include <stdbool.h>
 
 bool isLoadSuccess = false;
+
 String inputCommand = "";
 
 // ##############################  TEsting Functions  ############################
@@ -45,6 +46,9 @@ void setup()
         Serial.println("An error has occurred while mounting SPIFFS");
         return;
     }
+    
+    WiFi.mode(WIFI_STA);
+
 }
 
 void loop()
@@ -68,7 +72,7 @@ void loop()
 
                     Serial.println("Fetched SSID: " + ssid);
                     Serial.println("Fetched PASSWORD: " + password);
-                    ConnectWifi();
+                   ConnectWifi();
                 }  else if (inputCommand == "2")
                 {
                     if (fetchRemoteConfig(remoteConfigData))
@@ -97,11 +101,11 @@ void loop()
                     Serial.println("Updating Internal Config.json........ ");
                     if (updateConfigIfNeeded(remoteConfigData))
                     {
-                        Serial.println("Internal config.json Updated Successfully...............");
+                        Serial.println("Internal config.json Updated Successfully..........................");
                     }
                     else
                     {
-                        Serial.println("Internal config.json Not Updated ...............");
+                        Serial.println("Internal config.json Not Updated due to same version...............");
                     }
                 }
                 else
@@ -117,4 +121,6 @@ void loop()
             inputCommand += c; // Append incoming character
         }
     }
+
+    
 }

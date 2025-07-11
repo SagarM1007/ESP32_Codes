@@ -5,7 +5,6 @@
   "mqtt_port": 1883,
   "mqtt_topic_sub": "esp32/test/sub",
   "mqtt_topic_pub": "esp32/test/pub",
-  
   "device_id": "ESP32",
   "tenant_id": "Technosoft",
   "device_name": "TEMP Sensor ",
