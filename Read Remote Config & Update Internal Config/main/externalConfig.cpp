@@ -3,6 +3,7 @@
 
 // === Internal Config Parameters ===
 // Define global variables here
+
 String ssid;
 String password;
 

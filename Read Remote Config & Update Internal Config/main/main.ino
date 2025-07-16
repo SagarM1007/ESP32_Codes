@@ -48,7 +48,6 @@ void setup()
     }
     
     WiFi.mode(WIFI_STA);
-
 }
 
 void loop()

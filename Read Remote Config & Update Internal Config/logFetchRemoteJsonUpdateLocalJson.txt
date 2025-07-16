@@ -1,0 +1,128 @@
+Input Command: 1
+Local config.json Loaded........
+Fetched SSID: Redmi
+Fetched PASSWORD: Sagar1007
+Connecting to WiFi...
+...
+WiFi connected successfully.
+SSID: Redmi
+PASSWARD: Sagar1007
+IP Address: 192.168.54.163
+Wifi Connected Successfully Using Internal Config Parameters........
+
+
+Input Command: 2
+Remote JSON Fetched Successfully...
+
+Input Command: 3
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                Print Local Config  JSON               
+===== Configuration Data (From Global Variables) =====
+SSID: Redmi
+Password: Sagar1007
+MQTT Server: broker.hivemq.com
+MQTT Port: 1883
+MQTT Topic (Sub): esp32/test/sub
+MQTT Topic (Pub): esp32/test/pub
+Device ID: ESP32
+Tenant ID: Technosoft
+Device Name: TEMP Sensor 
+Device Type: DHT22
+Metric Name: TEMP
+Metric Value: 37.50
+Metric Unit: C
+Recorded At: 2025-06-15T17:00:00Z
+Location: 18.5204,73.8567
+Sensor Serial: SN-8890
+Firmware: 1.0.5
+Labels: lab env 
+
+
+Input Command: 4
+Printing Remote JSON And Updating Local one..............
+{
+  "ssid": "Redmi",
+  "password": "Sagar1007",
+  "mqtt_server": "broker.hivemq.com",
+  "mqtt_port": 1883,
+  "mqtt_topic_sub": "esp32/test/sub",
+  "mqtt_topic_pub": "esp32/test/pub",
+  
+  "device_id": "DEVICE123",
+  "tenant_id": "TENANT001",
+  "device_name": "Temperature Sensor A1",
+  "device_type": "DHT22",
+  "metric_name": "temperature",
+  "metric_value": 31.5,
+  "metric_unit": "C",
+  "recorded_at": "2025-06-15T17:00:00Z",
+  "location": "18.5204,73.8567",
+  "meta": {
+    "sensor_serial": "SN-8890",
+    "firmware": "1.0.5",
+    "labels": [
+      "lab",
+      "env"
+    ]
+  }
+}
+
+
+
+Input Command: 3
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                Print Local Config  JSON               
+===== Configuration Data (From Global Variables) =====
+SSID: Redmi
+Password: Sagar1007
+MQTT Server: broker.hivemq.com
+MQTT Port: 1883
+MQTT Topic (Sub): esp32/test/sub
+MQTT Topic (Pub): esp32/test/pub
+Device ID: DEVICE123
+Tenant ID: TENANT001
+Device Name: Temperature Sensor A1
+Device Type: DHT22
+Metric Name: temperature
+Metric Value: 31.50
+Metric Unit: C
+Recorded At: 2025-06-15T17:00:00Z
+Location: 18.5204,73.8567
+Sensor Serial: SN-8890
+Firmware: 1.0.5
+Labels: lab env 
+
+
+Input Command: 5
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Updating Internal Config.json........ 
+Internal config.json Updated Successfully..........................
+
+Input Command: 1
+Local config.json Loaded Success........
+Fetched SSID: Redmi
+Fetched PASSWORD: Sagar1007
+
+
+Input Command: 3
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                Print Local Config  JSON               
+===== Configuration Data (From Global Variables) =====
+SSID: Redmi
+Password: Sagar1007
+MQTT Server: broker.hivemq.com
+MQTT Port: 1883
+MQTT Topic (Sub): esp32/test/sub
+MQTT Topic (Pub): esp32/test/pub
+Device ID: DEVICE123
+Tenant ID: TENANT001
+Device Name: Temperature Sensor A1
+Device Type: DHT22
+Metric Name: temperature
+Metric Value: 31.50
+Metric Unit: C
+Recorded At: 2025-06-15T17:00:00Z
+Location: 18.5204,73.8567
+Sensor Serial: SN-8890
+Firmware: 1.0.5
+Labels: lab env 

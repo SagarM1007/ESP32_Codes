@@ -9,7 +9,6 @@ const int mqtt_port = 1883;
 const char* mqtt_topic_sub = "esp32/test/sub";
 const char* mqtt_topic_pub = "esp32/test/pub";
 
-
 #define LED_PIN_2 2
 
 WiFiClient espClient;
@@ -39,7 +38,9 @@ void callback(char* topic, byte* message, unsigned int length) {
   messageTemp.trim();  // remove \n or extra spaces
   Serial.println(messageTemp);
 
-  if (messageTemp == "ON") {
+  // 
+  
+  if(messageTemp == "ON") {
     digitalWrite(LED_PIN_2, HIGH);
     Serial.println("LED turned ON");
   } else if (messageTemp == "OFF") {

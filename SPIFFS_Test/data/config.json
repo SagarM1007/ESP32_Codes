@@ -6,8 +6,8 @@
   "mqtt_topic_sub": "esp32/test/sub",
   "mqtt_topic_pub": "esp32/test/pub",
   
-  "device_id": "ESP32",
-  "tenant_id": "Shaurya Technosoft",
+  "device_id": "DEVICE123",
+  "tenant_id": "TENANT001",
   "device_name": "Temperature Sensor A1",
   "device_type": "DHT22",
   "metric_name": "temperature",

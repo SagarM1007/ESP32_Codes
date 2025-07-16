@@ -1,20 +1,20 @@
+#include "wifiConfiguration.h"
+#include "config.h"
+#include <WiFi.h>
 
-#include "main.h"
-
-bool connectToWiFi(const String& ssid, const String& password)
-{
+bool connectToWiFi(const String& ssid, const String& password) {
   Serial.println("Connecting to WiFi...");
-  WiFi.begin(ssidCopy.c_str(), passCopy.c_str());
+  WiFi.begin(ssid.c_str(), password.c_str());
 
   unsigned long startAttemptTime = millis();
-  const unsigned long timeout = 10000;        // 10 seconds timeout
+  const unsigned long timeout = 10000; // 10 seconds timeout
 
   while (WiFi.status() != WL_CONNECTED && millis() - startAttemptTime < timeout) {
     delay(500);
     Serial.print(".");
   }
 
-    if (WiFi.status() == WL_CONNECTED) {
+  if (WiFi.status() == WL_CONNECTED) {
     Serial.println("\nWiFi connected successfully.");
     Serial.print("SSID: ");
     Serial.println(ssid);

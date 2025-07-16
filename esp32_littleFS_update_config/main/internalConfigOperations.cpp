@@ -1,35 +1,10 @@
 #include <SPIFFS.h>
 #include <ArduinoJson.h>
 #include <vector>
-
-String inputCommand = "";
-// ========== Global Variables ==========
-// WiFi & MQTT
-String ssid;
-String password;
-String mqttServer;
-int mqttPort;
-String mqttTopicSub;
-String mqttTopicPub;
-
-// Device Information
-String deviceId;
-String tenantId;
-String deviceName;
-String deviceType;
-String metricName;
-float metricValue;
-String metricUnit;
-String recordedAt;
-String location;
-
-// Meta Information
-String sensorSerial;
-String firmware;
-std::vector<String> labels;
+#include "main.h"
 
 // ========== Function to Load Config ==========
-void loadConfig() {
+void loadConfig(void) {
   File file = SPIFFS.open("/config.json", "r");
   if (!file) {
     Serial.println("Failed to open config.json");
@@ -85,7 +60,7 @@ void loadConfig() {
 }
 
 // ========== Function to Print Configuration ==========
-void printConfig() {
+void printConfig(void) {
   Serial.println("===== Configuration Data (From Global Variables) =====");
   Serial.print("SSID: "); Serial.println(ssid);
   Serial.print("Password: "); Serial.println(password);
@@ -113,43 +88,4 @@ void printConfig() {
     Serial.print(" ");
   }
   Serial.println();
-}
-
-// ========== Setup ==========
-void setup() {
-  Serial.begin(115200);
-  delay(1000);
-
-  if (!SPIFFS.begin(true)) {
-    Serial.println("An error has occurred while mounting SPIFFS");
-    return;
-  }
-
-}
-
-void loop() {
-  while (Serial.available() > 0) {
-    char c = Serial.read();
-
-    if (c == '\n' || c == '\r') {
-      inputCommand.trim();  // Remove whitespace or newline
-
-      if (inputCommand.length() > 0) {
-        Serial.println("Input Command: " + inputCommand);
-
-        if (inputCommand == "1") {
-          loadConfig(); // Read and Store Internal Config
-        }
-        else if (inputCommand == "2") {
-          printConfig();
-        } else {
-          Serial.println("Unknown Command. Use 1, 2");
-        }
-      }
-
-      inputCommand = "";  // Clear input after processing
-    } else {
-      inputCommand += c;  // Append incoming character
-    }
-  }
 }
