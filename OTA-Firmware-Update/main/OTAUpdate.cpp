@@ -1,7 +1,5 @@
 #include "OTAUpdate.h"
-#include <WiFiClientSecure.h>
-#include <HTTPClient.h>
-#include <Update.h>
+
 
 void performOTAUpdate(const String& firmwareURL) {
   if (WiFi.status() != WL_CONNECTED) {
@@ -12,7 +10,7 @@ void performOTAUpdate(const String& firmwareURL) {
   Serial.println("Starting OTA update...");
 
   WiFiClientSecure client;
-  client.setInsecure(); // ⚠️ Accepts any certificate — for dev/testing only
+  client.setInsecure(); //  Accepts any certificate — for dev/testing only =============================================> Red flag
 
   HTTPClient https;
   if (!https.begin(client, firmwareURL)) {
